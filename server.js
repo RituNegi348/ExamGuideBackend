@@ -34,7 +34,7 @@ const storage = new CloudinaryStorage({
 const upload = multer({ storage: storage });
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://exam-guide-frontend.vercel.app',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
