@@ -103,7 +103,11 @@ app.get('/getFiles', async(req, res)=>{
 })
 
 app.post('/logout',async(req,res)=>{
-    res.status(200).clearCookie("authToken").json({message:"logout successful"});
+    res.status(200).clearCookie("authToken",{
+      httpOnly: true,
+      secure: true,
+      sameSite: "lax"
+    }).json({message:"logout successful"});
 })
 
 
