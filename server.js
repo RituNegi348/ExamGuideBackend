@@ -106,7 +106,7 @@ app.post('/logout',async(req,res)=>{
     res.status(200).clearCookie("authToken",{
       httpOnly: true,
       secure: true,
-      sameSite: "lax"
+      sameSite: "none"
     }).json({message:"logout successful"});
 })
 
